@@ -21,3 +21,9 @@
 <h3><a href="https://github.com/xiaoqi521/crawler-project/blob/master/mzitu">mzitu</a></h3>
  <h4>爬取妹子图网站下载图片:</h4>
       爬取mzitu网站批量下载图集图片到本地</br>
+      
+      
+<h3><a href="https://github.com/xiaoqi521/crawler-project/blob/master/51job">mzitu</a></h3>
+ <h4>爬取51job招聘网站招聘信息:</h4>
+      爬取51job招聘网站存储到MONGODB数据库</br>
+
