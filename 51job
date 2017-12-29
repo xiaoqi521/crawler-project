@@ -10,6 +10,15 @@ import pymongo
 client = pymongo.MongoClient('localhost')
 db = client['WeChatRobot']
 
+city = '090200'   # 成都
+
+headers = {
+  'cookie': 'search=keyword%3D%E7%88%AC%E8%99%AB%26%7C%26jobarea%3D '+city + '; m_search=areacode%3D' + city,   # 他的城市在cookies中 成都:090200 北京:010000 上海:020000
+  'Host': 'm.51job.com',
+  'Upgrade-Insecure-Requests': '1',
+  'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
+}
+
 def get_data(keyword, page=1):
   data = {   # 构建post 传输的data数据
     'keyword': keyword,
@@ -18,7 +27,7 @@ def get_data(keyword, page=1):
   }
   url = 'http://m.51job.com/search/joblist.php?' + urlencode(data)
   try:
-    response = requests.get(url)
+    response = requests.get(url, headers=headers)
     if response.status_code == 200:
       response.encoding = 'utf-8'
       return response
@@ -143,7 +152,7 @@ def mian():
     html = get_data(keyword, i).text
     for url in get_url(html):
       # time.sleep(2)
-      html = requests.get(url['url'])
+      html = requests.get(url['url'], headers=headers)
       html.encoding = 'utf-8'
       for data in get_position(html.text):
         save_to_mongo(data)
