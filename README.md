@@ -26,4 +26,8 @@
 <h3><a href="https://github.com/xiaoqi521/crawler-project/blob/master/51job">51job</a></h3>
  <h4>爬取51job招聘网站招聘信息:</h4>
       爬取51job招聘网站存储到MONGODB数据库</br>
+<h3><a href="https://github.com/xiaoqi521/crawler-project/blob/master/baidubaiping">/baidubaiping</a></h3>
+ <h4>爬取/baidubaiping招聘网站招聘信息:</h4>
+      爬取/baidubaiping招聘网站存储到MONGODB数据库</br>
+
 
