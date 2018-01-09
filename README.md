@@ -32,5 +32,6 @@
 <h3><a href="https://github.com/xiaoqi521/crawler-project/blob/master/baidubaiping.py">Lookingjob</a></h3>
  <h4>爬取招聘信息+高德API选出最近的职位:</h4>
       从redsi中取出爬取的信息,保存成csv格式,在利用高德地图API选出离家最近的职位</br>
+      
 
 
